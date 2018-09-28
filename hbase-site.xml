@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+/**
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<configuration>
+<property>
+      <name>hbase.cluster.distributed</name>
+      <value>true</value>
+	#是否为分布式模式
+  </property>
+  <property>
+      <name>hbase.rootdir</name>
+      <value>hdfs://master:8020/hbase</value>
+	# HBase在hdfs上的目录路径
+  </property>
+  <property>
+      <name>hbase.tmp.dir</name>
+      <value>/data1/hbase</value>
+	#本地临时目录
+  </property>
+  <property>
+      <name>hbase.zookeeper.quorum</name>
+      <value>master,slave01,slave02</value>
+	zookeeper集群地址，逗号分隔
+  </property>
+  <property>
+    <name>hbase.hregion.max.filesize</name>
+<value>536870912</value>
+# hregion文件最大大小
+  </property>
+  <property>
+    <name>hbase.hregion.memstore.flush.size</name>
+<value>67108864</value>
+# memstore文件最大大小
+  </property>
+  <property>
+    <name>hbase.regionserver.lease.period</name>
+    <value>600000</value>
+  </property>
+  <property>
+    <name>hbase.client.retries.number</name>
+    <value>3</value>
+  </property>
+  <property>
+    <name>hbase.regionserver.handler.count</name>
+    <value>100</value>
+  </property>
+  <property>
+    <name>hbase.hstore.compactionThreshold</name>
+    <value>10</value>
+  </property>
+  <property>
+    <name>hbase.hstore.blockingStoreFiles</name>
+    <value>30</value>
+  </property>
+
+  <property>
+    <name>hbase.regionserver.checksum.verify</name>
+    <value>false</value>
+  </property>
+  <property>
+    <name>hbase.hstore.checksum.algorithm</name>
+    <value>NULL</value>
+  </property>
+  
+  <!--property>
+    <name>fs.hdfs.impl</name>
+    <value>org.apache.hadoop.hdfs.DistributedFileSystem</value>
+  </property>
+
+ <property>
+    <name>fs.file.impl</name>
+    <value>org.apache.hadoop.hdfs.DistributedFileSystem</value>
+  </property-->
+
+</configuration>
