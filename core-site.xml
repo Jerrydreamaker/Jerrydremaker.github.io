@@ -21,7 +21,7 @@
   <property>
     <name>fs.defaultFS</name>
     <value>hdfs://master:8020</value>
-    # master 为 NameNode 的主机名或 ip。
+    // master 为 NameNode 的主机名或 ip。
   </property>
 </configuration>
 
