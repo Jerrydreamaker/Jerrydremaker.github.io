@@ -21,6 +21,7 @@
  */
 -->
 <configuration>
+<!--根据需要修改 2-4 配置即可-->
 <property>
       <name>hbase.cluster.distributed</name>
       <value>true</value>
