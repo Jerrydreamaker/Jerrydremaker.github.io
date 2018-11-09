@@ -18,15 +18,11 @@
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 
 <configuration>
-<property>
-<name>fs.defaultFS</name>
- <value>hdfs://master:8020</value>
-</property>
-<!--property>
-    <name>fs.hdfs.impl</name>
-    <value>org.apache.hadoop.hdfs.DistributedFileSystem</value>
-  </property-->
-
+  <property>
+    <name>fs.defaultFS</name>
+    <value>hdfs://master:8020</value>
+    # master 为 NameNode 的主机名或 ip。
+  </property>
 </configuration>
 
 
