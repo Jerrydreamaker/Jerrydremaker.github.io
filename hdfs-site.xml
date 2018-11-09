@@ -26,14 +26,14 @@
 <property>
  <name>dfs.namenode.name.dir</name>
  <value>file:///namedir</value> 
-//master节点中添加，目录自行创建,cdh 版本 hdfs要求该目录和目录下的属组和用户为 hdfs:hdfs,所以在创建目录和 format 后使用 chown 命令改变属组和用户。
+//NameNode 节点中创建该目录,cdh 版本 hdfs要求该目录和目录下的属组和用户为 hdfs:hdfs,所以在创建目录和 format 后使用 chown 命令改变属组和用户。
 //apache 版本 hadoop 无权限要求,创建目录即可。
 </property>
 
 <property>
  <name>dfs.datanode.data.dir</name>
  <value>file:///datadir</value>
- //slave节点中添加，目录自行创建，cdh 版本在创建目录后使用 chown 命令将属组和用户改 为 hdfs:hdfs。
+ //DataNode 节点中创建目录，cdh 版本在创建目录后使用 chown 命令将属组和用户改 为 hdfs:hdfs。
  //apache 版本 hadoop 无权限要求,创建目录即可。 
 </property>
 </configuration>
