@@ -26,6 +26,7 @@
 # into the startup scripts (bin/hbase, etc.)
 
 # The java implementation to use.  Java 1.7+ required.
+# 根据需要修改 JAVA_HOME
  export JAVA_HOME=/opt/jdk
 
 
