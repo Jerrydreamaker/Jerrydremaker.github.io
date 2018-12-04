@@ -11,7 +11,7 @@
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<context:annotation-config />
-
+	<!--启动注解扫描，使用 base-package 知道扫描范围，使用 exclude-filter type 知道要排除的接口。-->
 	<context:component-scan base-package="com.imooc.mvcdemo">
 		<context:exclude-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
