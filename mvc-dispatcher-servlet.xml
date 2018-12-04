@@ -9,7 +9,7 @@
         http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-
+	
 	<!-- 本配置文件是工名为mvc-dispatcher的DispatcherServlet使用， 提供其相关的Spring MVC配置 -->
 
 	<!-- 启用Spring基于annotation的DI, 使用户可以在Spring MVC中使用Spring的强大功能。 激活 @Required 
@@ -24,17 +24,15 @@
 
 	<!-- HandlerMapping, 无需配置， Spring MVC可以默认启动。 DefaultAnnotationHandlerMapping 
 		annotation-driven HandlerMapping -->
-
+	
 	<!-- 扩充了注解驱动，可以将请求参数绑定到控制器参数 -->
 	<mvc:annotation-driven />
-
+	
 	<!-- 静态资源处理， css， js， imgs -->
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 
-
 	<!-- 配置ViewResolver。 可以用多个ViewResolver。 使用order属性排序。 InternalResourceViewResolver放在最后。 -->
-	<bean
-		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+	<bean	class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
 		<property name="order" value="1" />
 		<property name="mediaTypes">
 			<map>
@@ -55,6 +53,7 @@
 		<property name="ignoreAcceptHeader" value="true" />
 	</bean>
 
+	<!--配置 Html 跳转路径前缀后缀-->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="viewClass"
@@ -64,6 +63,7 @@
 	</bean>
 
 
+	<!-- 文件上传>
 	<!--200*1024*1024即200M resolveLazily属性启用是为了推迟文件解析，以便捕获文件大小异常 -->
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
@@ -71,5 +71,4 @@
 		<property name="defaultEncoding" value="UTF-8" />
 		<property name="resolveLazily" value="true" />
 	</bean>
-
 </beans>
