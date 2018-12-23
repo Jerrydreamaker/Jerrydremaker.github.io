@@ -27,7 +27,7 @@
         <property name="configLocation" value="Configure.xml" />
     </bean>
 
-    <bean id="userMaper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+    <bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
         <!--sqlSessionFactory属性指定要用到的SqlSessionFactory实例-->
         <property name="sqlSessionFactory" ref="sqlSessionFactory" />
         <!--mapperInterface属性指定映射器接口，用于实现此接口并生成映射器对象-->
